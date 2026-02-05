@@ -1,0 +1,78 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Periodic Table Explorer\n",
+        "\n",
+        "## Aim\n",
+        "To display basic information about elements from the periodic table using their symbols."
+      ],
+      "metadata": {
+        "id": "kAosxdNVlkE9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "# Periodic Table Explorer\n",
+        "\n",
+        "elements = {\n",
+        "    \"H\": {\"name\": \"Hydrogen\", \"atomic_number\": 1, \"mass\": 1},\n",
+        "    \"C\": {\"name\": \"Carbon\", \"atomic_number\": 6, \"mass\": 12},\n",
+        "    \"O\": {\"name\": \"Oxygen\", \"atomic_number\": 8, \"mass\": 16},\n",
+        "    \"Na\": {\"name\": \"Sodium\", \"atomic_number\": 11, \"mass\": 23},\n",
+        "    \"Cl\": {\"name\": \"Chlorine\", \"atomic_number\": 17, \"mass\": 35.5},\n",
+        "    \"S\": {\"name\": \"Sulfur\", \"atomic_number\": 16, \"mass\": 32}\n",
+        "}\n",
+        "\n",
+        "# ===== CHANGE SYMBOL HERE =====\n",
+        "symbol = \"Na\"\n",
+        "# ==============================\n",
+        "\n",
+        "info = elements.get(symbol)\n",
+        "\n",
+        "print(\"Symbol:\", symbol)\n",
+        "print(\"Name:\", info[\"name\"])\n",
+        "print(\"Atomic Number:\", info[\"atomic_number\"])\n",
+        "print(\"Atomic Mass:\", info[\"mass\"])\n",
+        "Print(\"Atomic Radii:\""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6YwXh8a4lvwb",
+        "outputId": "6aa41f74-d880-47fc-d5e3-bb8a803e4388"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Symbol: Na\n",
+            "Name: Sodium\n",
+            "Atomic Number: 11\n",
+            "Atomic Mass: 23\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

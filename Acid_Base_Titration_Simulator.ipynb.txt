@@ -1,0 +1,75 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Acid-Base Titration Simulator\n",
+        "\n",
+        "## Aim\n",
+        "To calculate the volume of base required to neutralize a given volume of acid.\n",
+        "\n",
+        "## Formula\n",
+        "CaVa = CbVb"
+      ],
+      "metadata": {
+        "id": "votwt_oltcLX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "# Titration Simulator\n",
+        "\n",
+        "# ===== CHANGE VALUES HERE =====\n",
+        "Ca = 0.2   # Acid concentration (mol/L)\n",
+        "Va = 20    # Acid volume (mL)\n",
+        "Cb = 0.1   # Base concentration (mol/L)\n",
+        "# ==============================\n",
+        "\n",
+        "Vb = (Ca * Va) / Cb\n",
+        "\n",
+        "print(\"Acid concentration (Ca) =\", Ca, \"mol/L\")\n",
+        "print(\"Acid volume (Va) =\", Va, \"mL\")\n",
+        "print(\"Base concentration (Cb) =\", Cb, \"mol/L\")\n",
+        "print(\"-----------------------------------\")\n",
+        "print(\"Required Base Volume (Vb) =\", Vb, \"mL\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nRzSYNhmtd_J",
+        "outputId": "0363837c-7d0c-4fa8-89ab-f7c7c3fcac65"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Acid concentration (Ca) = 0.2 mol/L\n",
+            "Acid volume (Va) = 20 mL\n",
+            "Base concentration (Cb) = 0.1 mol/L\n",
+            "-----------------------------------\n",
+            "Required Base Volume (Vb) = 40.0 mL\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

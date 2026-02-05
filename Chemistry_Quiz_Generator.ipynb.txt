@@ -1,0 +1,88 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Chemistry Quiz Generator\n",
+        "\n",
+        "## Aim\n",
+        "To generate random chemistry questions and check answers automatically."
+      ],
+      "metadata": {
+        "id": "hx6AO-WMTjJr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "import random\n",
+        "\n",
+        "questions = [\n",
+        "    {\n",
+        "        \"question\": \"What is the molar mass of H2O?\",\n",
+        "        \"options\": [\"18\", \"16\", \"20\", \"22\"],\n",
+        "        \"answer\": \"18\"\n",
+        "    },\n",
+        "    {\n",
+        "        \"question\": \"Which gas law is PV = nRT?\",\n",
+        "        \"options\": [\"Boyle's Law\", \"Charles Law\", \"Ideal Gas Law\", \"Avogadro Law\"],\n",
+        "        \"answer\": \"Ideal Gas Law\"\n",
+        "    },\n",
+        "    {\n",
+        "        \"question\": \"What is the atomic number of Oxygen?\",\n",
+        "        \"options\": [\"6\", \"7\", \"8\", \"9\"],\n",
+        "        \"answer\": \"8\"\n",
+        "    }\n",
+        "]\n",
+        "\n",
+        "q = random.choice(questions)\n",
+        "\n",
+        "print(q[\"question\"])\n",
+        "print(\"Options:\", q[\"options\"])\n",
+        "\n",
+        "# ===== PUT YOUR ANSWER HERE =====\n",
+        "your_answer = \"18\"\n",
+        "# =================================\n",
+        "\n",
+        "if your_answer == q[\"answer\"]:\n",
+        "    print(\"Correct!\")\n",
+        "else:\n",
+        "    print(\"Wrong! Correct answer is:\", q[\"answer\"])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "M9NeEihqTscX",
+        "outputId": "56c3cea5-f161-436e-af39-b3e66caadaa8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "What is the atomic number of Oxygen?\n",
+            "Options: ['6', '7', '8', '9']\n",
+            "Wrong! Correct answer is: 8\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

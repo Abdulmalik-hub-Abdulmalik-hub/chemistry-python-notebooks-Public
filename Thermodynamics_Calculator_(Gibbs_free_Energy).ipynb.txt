@@ -1,0 +1,80 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Thermodynamics Calculator (Gibbs Free Energy)\n",
+        "\n",
+        "## Aim\n",
+        "To calculate Gibbs Free Energy (ΔG) using the formula:\n",
+        "\n",
+        "ΔG = ΔH − TΔS"
+      ],
+      "metadata": {
+        "id": "Dxi4GQZmzCgv"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "# Thermodynamics Calculator\n",
+        "\n",
+        "# ===== CHANGE VALUES HERE =====\n",
+        "delta_H = -100   # Enthalpy (kJ/mol)\n",
+        "delta_S = -0.2   # Entropy (kJ/mol·K)\n",
+        "T = 298          # Temperature (K)\n",
+        "# ==============================\n",
+        "\n",
+        "delta_G = delta_H - (T * delta_S)\n",
+        "\n",
+        "print(\"ΔH =\", delta_H, \"kJ/mol\")\n",
+        "print(\"ΔS =\", delta_S, \"kJ/mol·K\")\n",
+        "print(\"T =\", T, \"K\")\n",
+        "print(\"-----------------------------\")\n",
+        "print(\"Gibbs Free Energy (ΔG) =\", delta_G, \"kJ/mol\")\n",
+        "\n",
+        "if delta_G < 0:\n",
+        "    print(\"Reaction is Spontaneous\")\n",
+        "else:\n",
+        "    print(\"Reaction is Non-Spontaneous\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Al8a8abZzSfx",
+        "outputId": "e50e2248-9474-4085-e28e-4a5099d28227"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ΔH = -100 kJ/mol\n",
+            "ΔS = -0.2 kJ/mol·K\n",
+            "T = 298 K\n",
+            "-----------------------------\n",
+            "Gibbs Free Energy (ΔG) = -40.4 kJ/mol\n",
+            "Reaction is Spontaneous\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

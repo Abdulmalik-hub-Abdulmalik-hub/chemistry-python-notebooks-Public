@@ -1,0 +1,69 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Chemical Equation Balancer\n",
+        "\n",
+        "## Aim\n",
+        "To balance simple chemical equations automatically using Python."
+      ],
+      "metadata": {
+        "id": "0vN4vXYAw7WZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "# Simple Chemical Equation Balancer for: H2 + O2 -> H2O\n",
+        "\n",
+        "print(\"Unbalanced Equation:\")\n",
+        "print(\"H2 + O2 -> H2O\")\n",
+        "\n",
+        "# Balanced coefficients\n",
+        "H2 = 2\n",
+        "O2 = 1\n",
+        "H2O = 2\n",
+        "\n",
+        "print(\"\\nBalanced Equation:\")\n",
+        "print(f\"{H2}H2 + {O2}O2 -> {H2O}H2O\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "J7XXMoN0xOEN",
+        "outputId": "c2cf8b0a-7e42-4072-962d-ae26f8667f61"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Unbalanced Equation:\n",
+            "H2 + O2 -> H2O\n",
+            "\n",
+            "Balanced Equation:\n",
+            "2H2 + 1O2 -> 2H2O\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
