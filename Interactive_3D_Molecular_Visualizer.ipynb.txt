@@ -1,0 +1,168 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0re7HJpAtS1P"
+      },
+      "source": [
+        "# Interactive 3D Molecular Visualizer\n",
+        "\n",
+        "Select a molecule and view it in 3D."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "background_save": true
+        },
+        "id": "W50T0CWHvBu4",
+        "outputId": "8b3a5762-ed09-4010-d56d-9296c1b21716"
+      },
+      "outputs": [
+        {
+          "data": {
+            "application/3dmoljs_load.v0": "<div id=\"3dmolviewer_17705457435273538\"  style=\"position: relative; width: 400px; height: 400px;\">\n        <p id=\"3dmolwarning_17705457435273538\" style=\"background-color:#ffcccc;color:black\">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>\n        </div>\n<script>\n\nvar loadScriptAsync = function(uri){\n  return new Promise((resolve, reject) => {\n    //this is to ignore the existence of requirejs amd\n    var savedexports, savedmodule;\n    if (typeof exports !== 'undefined') savedexports = exports;\n    else exports = {}\n    if (typeof module !== 'undefined') savedmodule = module;\n    else module = {}\n\n    var tag = document.createElement('script');\n    tag.src = uri;\n    tag.async = true;\n    tag.onload = () => {\n        exports = savedexports;\n        module = savedmodule;\n        resolve();\n    };\n  var firstScriptTag = document.getElementsByTagName('script')[0];\n  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);\n});\n};\n\nif(typeof $3Dmolpromise === 'undefined') {\n$3Dmolpromise = null;\n  $3Dmolpromise = loadScriptAsync('https://cdn.jsdelivr.net/npm/3dmol@2.5.4/build/3Dmol-min.js');\n}\n\nvar viewer_17705457435273538 = null;\nvar warn = document.getElementById(\"3dmolwarning_17705457435273538\");\nif(warn) {\n    warn.parentNode.removeChild(warn);\n}\n$3Dmolpromise.then(function() {\nviewer_17705457435273538 = $3Dmol.createViewer(document.getElementById(\"3dmolviewer_17705457435273538\"),{backgroundColor:\"white\"});\nviewer_17705457435273538.zoomTo();\n\tviewer_17705457435273538.addModel(\"\\n4\\nAmmonia\\nN 0.000 0.000 0.000\\nH 0.000 0.937 0.381\\nH 0.812 -0.469 0.381\\nH -0.812 -0.469 0.381\\n\",\"xyz\");\n\tviewer_17705457435273538.setStyle({\"stick\": {}});\n\tviewer_17705457435273538.zoomTo();\nviewer_17705457435273538.render();\n});\n</script>",
+            "text/html": [
+              "<div id=\"3dmolviewer_17705457435273538\"  style=\"position: relative; width: 400px; height: 400px;\">\n",
+              "        <p id=\"3dmolwarning_17705457435273538\" style=\"background-color:#ffcccc;color:black\">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>\n",
+              "        </div>\n",
+              "<script>\n",
+              "\n",
+              "var loadScriptAsync = function(uri){\n",
+              "  return new Promise((resolve, reject) => {\n",
+              "    //this is to ignore the existence of requirejs amd\n",
+              "    var savedexports, savedmodule;\n",
+              "    if (typeof exports !== 'undefined') savedexports = exports;\n",
+              "    else exports = {}\n",
+              "    if (typeof module !== 'undefined') savedmodule = module;\n",
+              "    else module = {}\n",
+              "\n",
+              "    var tag = document.createElement('script');\n",
+              "    tag.src = uri;\n",
+              "    tag.async = true;\n",
+              "    tag.onload = () => {\n",
+              "        exports = savedexports;\n",
+              "        module = savedmodule;\n",
+              "        resolve();\n",
+              "    };\n",
+              "  var firstScriptTag = document.getElementsByTagName('script')[0];\n",
+              "  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);\n",
+              "});\n",
+              "};\n",
+              "\n",
+              "if(typeof $3Dmolpromise === 'undefined') {\n",
+              "$3Dmolpromise = null;\n",
+              "  $3Dmolpromise = loadScriptAsync('https://cdn.jsdelivr.net/npm/3dmol@2.5.4/build/3Dmol-min.js');\n",
+              "}\n",
+              "\n",
+              "var viewer_17705457435273538 = null;\n",
+              "var warn = document.getElementById(\"3dmolwarning_17705457435273538\");\n",
+              "if(warn) {\n",
+              "    warn.parentNode.removeChild(warn);\n",
+              "}\n",
+              "$3Dmolpromise.then(function() {\n",
+              "viewer_17705457435273538 = $3Dmol.createViewer(document.getElementById(\"3dmolviewer_17705457435273538\"),{backgroundColor:\"white\"});\n",
+              "viewer_17705457435273538.zoomTo();\n",
+              "\tviewer_17705457435273538.addModel(\"\\n4\\nAmmonia\\nN 0.000 0.000 0.000\\nH 0.000 0.937 0.381\\nH 0.812 -0.469 0.381\\nH -0.812 -0.469 0.381\\n\",\"xyz\");\n",
+              "\tviewer_17705457435273538.setStyle({\"stick\": {}});\n",
+              "\tviewer_17705457435273538.zoomTo();\n",
+              "viewer_17705457435273538.render();\n",
+              "});\n",
+              "</script>"
+            ]
+          },
+          "metadata": {},
+          "output_type": "display_data"
+        },
+        {
+          "data": {
+            "text/html": [
+              "<div style=\"max-width:800px; border: 1px solid var(--colab-border-color);\"><style>\n",
+              "      pre.function-repr-contents {\n",
+              "        overflow-x: auto;\n",
+              "        padding: 8px 12px;\n",
+              "        max-height: 500px;\n",
+              "      }\n",
+              "\n",
+              "      pre.function-repr-contents.function-repr-contents-collapsed {\n",
+              "        cursor: pointer;\n",
+              "        max-height: 100px;\n",
+              "      }\n",
+              "    </style>\n",
+              "    <pre style=\"white-space: initial; background:\n",
+              "         var(--colab-secondary-surface-color); padding: 8px 12px;\n",
+              "         border-bottom: 1px solid var(--colab-border-color);\"><b>show_molecule</b><br/>def show_molecule(name)</pre><pre class=\"function-repr-contents function-repr-contents-collapsed\" style=\"\"><a class=\"filepath\" style=\"display:none\" href=\"#\">/tmp/ipython-input-4282683193.py</a>&lt;no docstring&gt;</pre></div>"
+            ],
+            "text/plain": [
+              "<function __main__.show_molecule(name)>"
+            ]
+          },
+          "execution_count": 2,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "\n",
+        "!pip install py3Dmol ipywidgets -q\n",
+        "\n",
+        "import py3Dmol\n",
+        "import ipywidgets as widgets\n",
+        "\n",
+        "molecules = {\n",
+        "    \"Water (H2O)\": \"\"\"\n",
+        "3\n",
+        "Water\n",
+        "O 0.000 0.000 0.000\n",
+        "H 0.758 0.000 0.504\n",
+        "H -0.758 0.000 0.504\n",
+        "\"\"\",\n",
+        "    \"Methane (CH4)\": \"\"\"\n",
+        "5\n",
+        "Methane\n",
+        "C 0.000 0.000 0.000\n",
+        "H 0.629 0.629 0.629\n",
+        "H -0.629 -0.629 0.629\n",
+        "H -0.629 0.629 -0.629\n",
+        "H 0.629 -0.629 -0.629\n",
+        "\"\"\",\n",
+        "    \"Ammonia (NH3)\": \"\"\"\n",
+        "4\n",
+        "Ammonia\n",
+        "N 0.000 0.000 0.000\n",
+        "H 0.000 0.937 0.381\n",
+        "H 0.812 -0.469 0.381\n",
+        "H -0.812 -0.469 0.381\n",
+        "\"\"\"\n",
+        "}\n",
+        "\n",
+        "def show_molecule(name):\n",
+        "    xyz = molecules[name]\n",
+        "    view = py3Dmol.view(width=400, height=400)\n",
+        "    view.addModel(xyz, \"xyz\")\n",
+        "    view.setStyle({'stick':{}})\n",
+        "    view.zoomTo()\n",
+        "    view.show()\n",
+        "\n",
+        "widgets.interact(show_molecule, name=list(molecules.keys()))"
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
