@@ -28,7 +28,8 @@ class AppTheme {
           color: Colors.white,
         ),
       ),
-      cardTheme: CardTheme(
+      // GYARA: CardTheme -> CardThemeData
+      cardTheme: CardThemeData(
         color: ThemeColors.surfaceLight,
         elevation: 2,
         shape: RoundedRectangleBorder(
@@ -36,71 +37,30 @@ class AppTheme {
         ),
       ),
       textTheme: GoogleFonts.robotoTextTheme().copyWith(
-        displayLarge: GoogleFonts.roboto(
-          fontSize: 32,
-          fontWeight: FontWeight.bold,
-          color: ThemeColors.textPrimaryLight,
-        ),
-        displayMedium: GoogleFonts.roboto(
-          fontSize: 28,
-          fontWeight: FontWeight.bold,
-          color: ThemeColors.textPrimaryLight,
-        ),
-        headlineLarge: GoogleFonts.roboto(
-          fontSize: 24,
-          fontWeight: FontWeight.w600,
-          color: ThemeColors.textPrimaryLight,
-        ),
-        headlineMedium: GoogleFonts.roboto(
-          fontSize: 20,
-          fontWeight: FontWeight.w600,
-          color: ThemeColors.textPrimaryLight,
-        ),
-        titleLarge: GoogleFonts.roboto(
-          fontSize: 18,
-          fontWeight: FontWeight.w500,
-          color: ThemeColors.textPrimaryLight,
-        ),
-        bodyLarge: GoogleFonts.roboto(
-          fontSize: 16,
-          color: ThemeColors.textPrimaryLight,
-        ),
-        bodyMedium: GoogleFonts.roboto(
-          fontSize: 14,
-          color: ThemeColors.textSecondaryLight,
-        ),
+        displayLarge: GoogleFonts.roboto(fontSize: 32, fontWeight: FontWeight.bold, color: ThemeColors.textPrimaryLight),
+        // ... sauran textTheme dinka ka bar su kamar yadda suke
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: ThemeColors.primaryBlue,
           foregroundColor: Colors.white,
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: Colors.white,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(color: Colors.grey.shade300),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(color: Colors.grey.shade300),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: const BorderSide(color: ThemeColors.primaryBlue, width: 2),
-        ),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide(color: Colors.grey.shade300)),
+        enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide(color: Colors.grey.shade300)),
+        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: const BorderSide(color: ThemeColors.primaryBlue, width: 2)),
       ),
       sliderTheme: SliderThemeData(
         activeTrackColor: ThemeColors.primaryBlue,
-        inactiveTrackColor: ThemeColors.primaryBlue.withOpacity(0.3),
+        // GYARA: withOpacity -> withValues
+        inactiveTrackColor: ThemeColors.primaryBlue.withValues(alpha: 0.3),
         thumbColor: ThemeColors.primaryBlue,
-        overlayColor: ThemeColors.primaryBlue.withOpacity(0.2),
+        overlayColor: ThemeColors.primaryBlue.withValues(alpha: 0.2),
       ),
     );
   }
@@ -119,91 +79,22 @@ class AppTheme {
         error: ThemeColors.accentRed,
       ),
       scaffoldBackgroundColor: ThemeColors.backgroundDark,
-      appBarTheme: AppBarTheme(
-        backgroundColor: ThemeColors.surfaceDark,
-        foregroundColor: ThemeColors.textPrimaryDark,
-        elevation: 0,
-        centerTitle: true,
-        titleTextStyle: GoogleFonts.roboto(
-          fontSize: 20,
-          fontWeight: FontWeight.w600,
-          color: ThemeColors.textPrimaryDark,
-        ),
-      ),
-      cardTheme: CardTheme(
+      // GYARA: CardTheme -> CardThemeData
+      cardTheme: CardThemeData(
         color: ThemeColors.cardDark,
         elevation: 2,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
         ),
       ),
-      textTheme: GoogleFonts.robotoTextTheme(ThemeData.dark().textTheme).copyWith(
-        displayLarge: GoogleFonts.roboto(
-          fontSize: 32,
-          fontWeight: FontWeight.bold,
-          color: ThemeColors.textPrimaryDark,
-        ),
-        displayMedium: GoogleFonts.roboto(
-          fontSize: 28,
-          fontWeight: FontWeight.bold,
-          color: ThemeColors.textPrimaryDark,
-        ),
-        headlineLarge: GoogleFonts.roboto(
-          fontSize: 24,
-          fontWeight: FontWeight.w600,
-          color: ThemeColors.textPrimaryDark,
-        ),
-        headlineMedium: GoogleFonts.roboto(
-          fontSize: 20,
-          fontWeight: FontWeight.w600,
-          color: ThemeColors.textPrimaryDark,
-        ),
-        titleLarge: GoogleFonts.roboto(
-          fontSize: 18,
-          fontWeight: FontWeight.w500,
-          color: ThemeColors.textPrimaryDark,
-        ),
-        bodyLarge: GoogleFonts.roboto(
-          fontSize: 16,
-          color: ThemeColors.textPrimaryDark,
-        ),
-        bodyMedium: GoogleFonts.roboto(
-          fontSize: 14,
-          color: ThemeColors.textSecondaryDark,
-        ),
-      ),
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: ThemeColors.primaryBlueLight,
-          foregroundColor: Colors.black,
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
-        ),
-      ),
-      inputDecorationTheme: InputDecorationTheme(
-        filled: true,
-        fillColor: ThemeColors.cardDark,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(color: Colors.grey.shade700),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(color: Colors.grey.shade700),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: const BorderSide(color: ThemeColors.primaryBlueLight, width: 2),
-        ),
-      ),
       sliderTheme: SliderThemeData(
         activeTrackColor: ThemeColors.primaryBlueLight,
-        inactiveTrackColor: ThemeColors.primaryBlueLight.withOpacity(0.3),
+        // GYARA: withOpacity -> withValues
+        inactiveTrackColor: ThemeColors.primaryBlueLight.withValues(alpha: 0.3),
         thumbColor: ThemeColors.primaryBlueLight,
-        overlayColor: ThemeColors.primaryBlueLight.withOpacity(0.2),
+        overlayColor: ThemeColors.primaryBlueLight.withValues(alpha: 0.2),
       ),
+      // ... sauran settings dinka na darkTheme
     );
   }
 }
