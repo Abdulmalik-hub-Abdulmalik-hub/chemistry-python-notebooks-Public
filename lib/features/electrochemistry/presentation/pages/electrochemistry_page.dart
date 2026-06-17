@@ -11,7 +11,6 @@ class _ElectrochemistryPageState extends State<ElectrochemistryPage> {
   String _cathode = 'Cu²⁺/Cu';
   String _anode = 'Zn²⁺/Zn';
   double _cellPotential = 1.10;
-  double _temperature = 298;
   
   final Map<String, double> _standardPotentials = {
     'Li⁺/Li': -3.04,

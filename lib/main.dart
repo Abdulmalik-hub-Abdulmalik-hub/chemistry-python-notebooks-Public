@@ -3,20 +3,10 @@ import 'core/theme/app_theme.dart';
 import 'core/constants/app_constants.dart';
 import 'features/periodic_table/presentation/pages/periodic_table_page.dart';
 import 'features/ph_titration/presentation/pages/ph_titration_page.dart';
-import 'features/gas_laws/presentation/pages/gas_laws_page.dart';
 import 'features/quantum_energy/presentation/pages/quantum_energy_page.dart';
-import 'features/thermodynamics/presentation/pages/thermodynamics_page.dart';
 import 'features/stoichiometry/presentation/pages/stoichiometry_page.dart';
-import 'features/lab_safety/presentation/pages/lab_safety_page.dart';
 import 'features/spectroscopy/presentation/pages/spectroscopy_page.dart';
-import 'features/electrochemistry/presentation/pages/electrochemistry_page.dart';
-import 'features/equilibrium/presentation/pages/equilibrium_page.dart';
-import 'features/buffer_calculator/presentation/pages/buffer_calculator_page.dart';
-import 'features/concentration_converter/presentation/pages/concentration_converter_page.dart';
-import 'features/formula_analyzer/presentation/pages/formula_analyzer_page.dart';
 import 'features/molecular_visualizer/presentation/pages/molecular_visualizer_page.dart';
-import 'features/docking_score/presentation/pages/docking_score_page.dart';
-import 'features/reaction_rate/presentation/pages/reaction_rate_page.dart';
 import 'features/chemistry_assistant/presentation/pages/chemistry_assistant_page.dart';
 
 void main() {

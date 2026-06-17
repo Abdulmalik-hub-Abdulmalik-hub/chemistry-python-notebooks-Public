@@ -12,7 +12,6 @@ class PeriodicTablePage extends StatefulWidget {
 
 class _PeriodicTablePageState extends State<PeriodicTablePage> {
   String _searchQuery = '';
-  ChemicalElement? _selectedElement;
 
   @override
   Widget build(BuildContext context) {

@@ -75,6 +75,16 @@ class _StoichiometryPageState extends State<StoichiometryPage> {
                         ),
                         child: Text(_moles, style: const TextStyle(fontWeight: FontWeight.bold)),
                       ),
+                    if (_mass.isNotEmpty)
+                      Container(
+                        margin: const EdgeInsets.only(top: 8),
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: Theme.of(context).colorScheme.tertiaryContainer,
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Text(_mass, style: const TextStyle(fontWeight: FontWeight.bold)),
+                      ),
                   ],
                 ),
               ),

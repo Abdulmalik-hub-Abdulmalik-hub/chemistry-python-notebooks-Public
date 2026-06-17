@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
-import '../../../../core/utils/chemistry_calculations.dart';
 
 class EquilibriumPage extends StatefulWidget {
   const EquilibriumPage({super.key});
@@ -32,7 +31,6 @@ class _EquilibriumPageState extends State<EquilibriumPage> {
 
   double _solveEquilibrium(double a, double b, double k) {
     double c = 1.0;
-    double d = 1.0;
     for (int i = 0; i < 100; i++) {
       double num = k * a * b;
       double den = 1 + k * a + k * b;
